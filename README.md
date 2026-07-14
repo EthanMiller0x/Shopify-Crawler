@@ -44,14 +44,29 @@ python3 scripts/crawl.py somestore.com --max 500 --delay 1.0
 
 ## Install as a skill
 
-Copy this folder into your skills directory (or a plugin marketplace), e.g.:
+Once you install it, you no longer need to remember the CLI — just ask Claude in
+plain language and it runs the crawler for you.
+
+**1. Copy the folder into your skills directory (one time):**
 
 ```bash
-cp -r Shopify-Crawler ~/.claude/skills/shopify-crawler
+cp -r /Users/ethanmiller/Documents/Companies/Lab3/Shopify-Crawler \
+  ~/.claude/skills/shopify-crawler
 ```
 
-Then Claude will invoke it automatically when you ask it to crawl, scrape, or
-export products from a Shopify shop.
+(If you cloned this repo elsewhere, point `cp -r` at your local copy instead.)
+
+**2. Talk to Claude — it invokes the skill automatically:**
+
+> "Crawl all products from gymshark.com and give me a CSV"
+>
+> "Grab the men's collection from allbirds.com as JSON"
+>
+> "Export this Shopify shop's catalog: somestore.com"
+
+Claude recognizes the intent, runs `scripts/crawl.py` with the right flags, and
+hands you the resulting JSON/CSV files. Verify it's loaded by checking that
+`shopify-crawler` appears in your skills list.
 
 ## When a store returns nothing
 
