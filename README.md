@@ -47,14 +47,14 @@ python3 scripts/crawl.py somestore.com --max 500 --delay 1.0
 Once you install it, you no longer need to remember the CLI — just ask Claude in
 plain language and it runs the crawler for you.
 
-**1. Copy the folder into your skills directory (one time):**
+**1. Clone this repo and copy it into your skills directory (one time):**
 
 ```bash
-cp -r /Users/ethanmiller/Documents/Companies/Lab3/Shopify-Crawler \
-  ~/.claude/skills/shopify-crawler
+git clone https://github.com/EthanMiller0x/Shopify-Crawler.git
+cp -r Shopify-Crawler ~/.claude/skills/shopify-crawler
 ```
 
-(If you cloned this repo elsewhere, point `cp -r` at your local copy instead.)
+(Already have the repo locally? Just run the `cp -r` from wherever it lives.)
 
 **2. Talk to Claude — it invokes the skill automatically:**
 
