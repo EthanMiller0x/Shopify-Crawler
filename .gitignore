@@ -1,0 +1,14 @@
+# Crawl outputs
+*.json
+*.csv
+!package.json
+!tsconfig.json
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# OS
+.DS_Store
